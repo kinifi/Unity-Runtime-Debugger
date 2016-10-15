@@ -1,5 +1,6 @@
 # Unity-Runtime-Debugger
-Get Logs, Warnings, Errors, Full Stack Traces, FPS, and disable/enable objects at runtime to find problem GameObjects
+Get Logs, Warnings, Errors, Full Stack Traces, FPS, and disable/enable objects at runtime to find problem GameObjects. All Stacktraces can be copy and pasted. 
+
 
 ![alt text](http://i.imgur.com/feRyDn1.png "In Editor Image")
 
