@@ -38,7 +38,7 @@ public class Debugger : MonoBehaviour {
 
 	}
 
-	private void ToggleDebugger()
+	public void ToggleDebugger()
 	{
 		m_debuggerOn = !m_debuggerOn;
     	// Debug.Log("Toggling Debugger");
