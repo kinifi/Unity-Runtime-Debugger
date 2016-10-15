@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Debugger : MonoBehaviour {
 
+    public bool m_DestroyOnSceneChange = false;
+
 	private bool m_debuggerOn = false;
 
 	public List<Log> m_logs = new List<Log>();
@@ -20,8 +22,11 @@ public class Debugger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		DontDestroyOnLoad(this.gameObject);
-	
+        //check if we want to make this object persistent throughout our scenes
+        if (m_DestroyOnSceneChange == false)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
 	}
 	
 	// Update is called once per frame
