@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -168,8 +169,12 @@ public class Debugger : MonoBehaviour {
     private void TreeCreation()
     {
     	//find all the GameObjects in the scene
-		foreach (GameObject obj in Object.FindObjectsOfType(typeof(GameObject)))
+		foreach (GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects())
 		{
+		    	if (obj.transform.root.gameObject.activeInHierarchy)
+                		GUI.color = Color.white;
+           		else
+                		GUI.color = Color.red;
 
 			//TODO: check if child count exists
 			if (obj.transform.childCount != 0)
